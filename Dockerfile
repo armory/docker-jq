@@ -1,7 +1,8 @@
 # Dockerfile
 # ==========
 
-FROM busybox:ubuntu-14.04
-MAINTAINER Chao Huang <chao@realguess.net>
+FROM alpine:3.8
+MAINTAINER Armory <eng@amrory.io>
 
-COPY ./bin/jq /bin/jq
+ARG JQ_VERSION
+RUN apk update && apk add jq=$JQ_VERSION
