@@ -1,0 +1,3 @@
+export GIT_HASH=$(git rev-parse --short HEAD)
+export JQ_VERSION=1.6_rc1-r1
+export DOCKER_TAG="${JQ_VERSION}-${GIT_HASH}"

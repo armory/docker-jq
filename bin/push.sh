@@ -2,5 +2,6 @@
 cd "$(dirname "$0")/.."
 
 
-JQ_VERSION=1.6_rc1-r1
-docker push armory/jq:${JQ_VERSION}
+source bin/env
+
+docker push armory/jq:${DOCKER_TAG}
